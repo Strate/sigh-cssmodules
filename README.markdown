@@ -1,8 +1,10 @@
+# [WIP] NOT PRODUCTION READY
+
 # sigh-cssmodules
 
 [![build status](https://circleci.com/gh/Strate/sigh-cssmodules.png)](https://circleci.com/gh/Strate/sigh-cssmodules)
 
-Sigh plugin for...
+Sigh plugin for CSSModules
 
 ## Example
 

@@ -167,7 +167,11 @@ export default function(op, opts = {}) {
         index++,
         pathFetcher
       ).then(({injectableSource, exportTokens}) => {
-        event.data = ":export " + JSON.stringify(exportTokens) + "\n" + injectableSource
+        var lines = [];
+        _.each(exportTokens, (realClass, name) => {
+          lines.push("  " + name + ": " + realClass + ";")
+        })
+        event.data = ":export {\n" + lines.join("\n") + "\n}\n" + injectableSource
         return event;
       })
     } else {
